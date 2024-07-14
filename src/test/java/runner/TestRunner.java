@@ -1,5 +1,6 @@
 package runner;
 
+import driver.StartBrowser;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.AfterClass;
@@ -10,14 +11,16 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/java/features",
         glue = {""},
-        tags = "@Login2"
+        tags = "@Login1"
 )
 public class TestRunner {
     @BeforeClass
     public static void antes() {
+        StartBrowser.driver();
     }
 
     @AfterClass
     public static void depois() {
+        StartBrowser.closeDriver();
     }
 }

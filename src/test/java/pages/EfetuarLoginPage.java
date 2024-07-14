@@ -1,23 +1,22 @@
 package pages;
 
+import driver.StartBrowser;
 import elementos.EfetuarLoginElemento;
 import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
 import properties.Properties;
-import properties.TestRule;
 
-import static properties.TestRule.driver;
 
 public class EfetuarLoginPage extends EfetuarLoginElemento {
     public EfetuarLoginPage() {
-        PageFactory.initElements(TestRule.getDriver(), this);
+        PageFactory.initElements(StartBrowser.getDriver(), this);
     }
 
     public void acessoAURLDaPlataforma() {
-        driver.get(Properties.getProp().get("prop.URL").toString());
+        StartBrowser.getDriver().get(Properties.getProp().get("prop.URL").toString());
     }
 
-    public void preenchoAsInformacoesDeUsuarioESenha()  {
+    public void efetuarLogin() {
         campoNomeDoUsuario.click();
         campoNomeDoUsuario.sendKeys(Properties.getProp().get("prop.user").toString());
         btnEntrar.click();

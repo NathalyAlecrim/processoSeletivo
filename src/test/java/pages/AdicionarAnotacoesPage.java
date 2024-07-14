@@ -1,14 +1,14 @@
 package pages;
 
+import driver.StartBrowser;
 import elementos.AdicionarAnotacoesElemento;
 import org.junit.Assert;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-import properties.TestRule;
 
 public class AdicionarAnotacoesPage extends AdicionarAnotacoesElemento {
     public AdicionarAnotacoesPage() {
-        PageFactory.initElements(TestRule.getDriver(), this);
+        PageFactory.initElements(StartBrowser.getDriver(), this);
     }
 
     public void clicoEmVerTarefa() {

@@ -5,10 +5,10 @@ import org.openqa.selenium.support.FindBy;
 
 public class AdicionarAnotacoesElemento {
 
-    @FindBy(xpath = "//*[@id=\"sidebar\"]/ul/li[2]/a/i")
+    @FindBy(css = "[id='sidebar']>ul>li:nth-child(2) [href='/view_all_bug_page.php']")
     public WebElement menuVerTarefas;
 
-    @FindBy(css = "#buglist tr:nth-of-type(8) .lbl")
+    @FindBy(css = "#buglist tr:nth-of-type(1) .lbl")
     public WebElement btnSelectTarefa;
 
     @FindBy(css = "[name='action']")

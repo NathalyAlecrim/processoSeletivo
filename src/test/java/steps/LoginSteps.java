@@ -12,9 +12,9 @@ public class LoginSteps {
         efetuarLoginPage.acessoAURLDaPlataforma();
     }
 
-    @When("preencho as informacoes de usuario e senha")
-    public void preencho_as_informacoes_de_usuario_e_senha() {
-        efetuarLoginPage.preenchoAsInformacoesDeUsuarioESenha();
+    @When("realizo login com usuario e senha")
+    public void realizo_login_com_usuario_e_senha() {
+        efetuarLoginPage.efetuarLogin();
     }
 
     @When("preencho as informacoes de usuario e senha incorretos")

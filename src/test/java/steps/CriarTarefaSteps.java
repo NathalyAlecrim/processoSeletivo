@@ -12,44 +12,14 @@ public class CriarTarefaSteps {
         relatarProblemaPage.acessarAba();
     }
 
-    @And("seleciono opcao no campo categoria")
-    public void seleciono_opcao_no_campo_categoria() {
-        relatarProblemaPage.selecionoOcampoCategoria();
+    @And("seleciono a opcao {string} no campo {string}")
+    public void seleciono_opcao_no_campo_categoria(String opcao, String campo) {
+        relatarProblemaPage.selecionoOpcao(opcao, campo);
     }
 
-    @When("seleciono opcao no campo frequencia")
-    public void seleciono_opcao_no_campo_frequencia() {
-        relatarProblemaPage.selecionoOcampoFrequencia();
-    }
-
-    @When("seleciono opcao no campo gravidade")
-    public void seleciono_opcao_no_campo_gravidade() {
-        relatarProblemaPage.selecionoOcampoGravidade();
-    }
-
-    @When("seleciono opcao no campo prioridade")
-    public void seleciono_opcao_no_campo_prioridade() {
-        relatarProblemaPage.selecionoOcampoPrioridade();
-    }
-
-    @When("preencho o campo resumo {string}")
-    public void preencho_o_campo_resumo(String resumo) {
-        relatarProblemaPage.preencherOcampoResumo(resumo);
-    }
-
-    @When("preencho o campo descricao {string}")
-    public void preencho_o_campo_descricao(String descricao) {
-        relatarProblemaPage.preencherOcampoDescricao(descricao);
-    }
-
-    @When("preencho o campo passos para reproduzir {string}")
-    public void preencho_o_campo_passos_para_reproduzir(String passos) {
-        relatarProblemaPage.preencherOcampoPassosParaReproduzir(passos);
-    }
-
-    @When("preencho o campo informações adicionais	com {string}")
-    public void preencho_o_campo_informações_adicionais_com(String info) {
-        relatarProblemaPage.preencherOcampoInformacoes(info);
+    @And("preencho o campo {string} com a informacao {string}")
+    public void preencho_o_campo_com_a_informacao(String campo, String texto) {
+        relatarProblemaPage.preenchoCampo(campo, texto);
     }
 
     @Then("validarei a tarefa foi criada")
