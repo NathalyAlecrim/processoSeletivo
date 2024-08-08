@@ -5,19 +5,18 @@ import org.openqa.selenium.support.FindBy;
 
 public class EfetuarLoginElemento {
 
-    @FindBy(xpath = "//input[@id='username']")
+    @FindBy(css = "[name='username']")
     public WebElement campoNomeDoUsuario;
 
-    @FindBy(css = ".width-40")
+    @FindBy(css = ".oxd-button")
     protected WebElement btnEntrar;
 
-    @FindBy(id = "password")
+    @FindBy(css = "[name='password']")
     protected WebElement campoSenha;
 
-    @FindBy(css = ".user-info")
+    @FindBy(css = "[alt='client brand banner']")
     protected WebElement campoUserInfo;
 
-    @FindBy(css = ".alert-danger > p")
-    protected WebElement msg_erro;
+
 
 }
